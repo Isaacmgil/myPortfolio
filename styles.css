@@ -1,7 +1,7 @@
 html {
     font-size: 10px;
     overflow: scroll;
-}
+} 
 
 body {
     margin: 0;
@@ -220,8 +220,7 @@ body::after {
     padding: 2rem;
     width: 70rem;
     height: 25rem;
-    flex-direction: column;
-    margin-bottom: 0
+    margin-bottom: -3rem
 }
 
 .project-details h3 {
@@ -237,9 +236,9 @@ body::after {
 }
 
 .socials-container {
-    margin-top: 2rem;
+    margin-top: 3rem;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .socials-container a {
