@@ -242,7 +242,12 @@ body::after {
 }
 
 .socials-container a {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
     padding: 1em;
     border-radius: 50%;
     height: 1rem;
@@ -251,93 +256,56 @@ body::after {
     flex-shrink: 0;
     display: grid;
     place-items: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: visible;
+    transition: all 300ms ease;
 }
 
 .socials-container a svg {
     height: 2rem;
     margin-top: -1rem;
+    fill: white;
+    transition: fill 0.3s ease;
 }
 
 .socials-container a::before {
     content: attr(data-social);
     position: absolute;
-    background-color: var(--accent-color);
+    font-size: 1.4rem;
+
+    background-color: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+
     color: white;
     text-decoration: none;
     padding: 0.5em 1rem;
     border-radius: 100px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    white-space: nowrap; 
+    pointer-events: none; 
+    z-index: 10; 
+
+    
     transform: translateY(-30px) rotate(25deg);
     opacity: 0;
-    transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
+    transition: transform 200ms cubic-bezier(.42, 0, .44, 1.68), opacity 200ms ease;
 }
 
 .socials-container a:hover {
     background-color: var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.socials-container a:hover svg {
     fill: white;
 }
 
 .socials-container a:hover::before {
-    transform: translateY(-50px) rotate(0);
+    transform: translateY(-50px) rotate(0); /* Muestra y posiciona el tooltip */
     opacity: 1;
-}
-
-.socials-container a:hover::after {
-    transform: translateY(-1rem) rotate(0);
-    opacity: 1;
-}
-
-.live__button {
-    width: 8rem;
-    height: 3rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    background: linear-gradient(to right, #2abfff, #0071ff);
-    border: none;
-    border-radius: 2px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-    color: white;
-
-}
-
-.live__button::after {
-    width: 8rem;
-    content: "";
-    background: linear-gradient(to right, #ffee00, #ffb300);
-    height: 100%;
-    width: 0px;
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    transition: 300ms ease-in-out;
-}
-
-.live__button:hover:after {
-    width: 8rem;
-}
-
-.live__button svg {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-left: 0.3rem;
-    transition: all 300ms ease;
-}
-
-.live__button:hover {
-    color: black;
-    width: 8rem;
-}
-
-.live__button:hover>svg {
-    transform: rotate(45deg);
 }
 
 .stack{
