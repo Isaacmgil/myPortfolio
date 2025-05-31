@@ -17,21 +17,22 @@
 <body>
     <navbar class="header">
         <a href="">
-            <img class="header_logo" src="./I LOGO.png" alt="LOGO">
+            <img class="header__logo" src="./I LOGO.png" alt="LOGO">
         </a>
     </navbar>
-    <div class="layout">
-        <div class="main_container">
-            <section class="main_profile">
-                <div class="card_container glass-effect">
-                    <div class="profile_pic-container">
-                        <div class="profile_pic">
-                            <img class="profile_pic" src="Profile Isaac.jpg" alt="">
+    <div class="layout__content">
+        <div class="main__container">
+            <section class="main__profile">
+                <div class="card__container glass__effect">
+                    <div class="profile__pic-container">
+                        <div class="profile__pic">
+                            <img class="profile__pic" src="Profile Isaac.jpg" alt="">
                         </div>
                     </div>
-                    <div class="profile_info">
-                        <h1 class="info_title">Isaac Meneses</h1>
-                        <p class="info_text">Honestamente, me encanta desarrollar, diseñar, programar y crear cosas solo
+                    <div class="profile__info">
+                        <h1 class="info__title">Isaac Meneses</h1>
+                        <p class="info__text">Honestamente, me encanta desarrollar, diseñar, programar y crear cosas
+                            solo
                             para ver cómo cobran vida en la pantalla...</p>
                     </div>
                 </div>
@@ -39,7 +40,7 @@
             <!--PROJECTS AND EXPERIENCE-->
             <section class="projects__experience">
                 <header class="projects__header">
-                    <h2 class="main_content">
+                    <h2 class="main__content">
                         Experience and Projects
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" viewBox="0 0 1024 1024">
@@ -52,22 +53,25 @@
 
 
                 <article class="projects__container">
-                    <div class="project-card">
-                        <div class="project-image">
+                    <div class="project__card">
+                        <div class="project__image">
                             <img src="CountryAppImages.png" alt="CountryProject">
                         </div>
 
-                        <div class="project-details">
+                        <div class="project__details">
                             <h3>CountryProjectApp</h3>
                             <p>With our CountryApp you have access to global information instantly. Built with Angular,
                                 our website allows you to explore countries and discover their flags, populations, and
                                 more with just a few keystrokes, providing you with accurate data in seconds.</p>
 
-                            <div class="socials-container" data-project-id="country-app">
-                                <!--TECHS HERE!-->
-                            </div>
+                            <ul class="tech__list" data-project-id="country-app">
+                            </ul>
+
+                            <a href="#" class="live__button-link" data-live-project-id="country-app"
+                                data-social="Ver Proyecto">
+                                Live
+                            </a>
                         </div>
-                    </div>
                 </article>
 
             </section>
