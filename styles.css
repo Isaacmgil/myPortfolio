@@ -354,7 +354,7 @@ body::after {
     margin-left: -4.5rem;
 }
 
-.tech-card {
+.tech__card {
     margin-top: 1rem;
     position: relative;
     width: 6rem;
@@ -372,7 +372,7 @@ body::after {
     box-shadow: 0 0 10px rgba(240, 219, 79, 0.05);
 }
 
-.tech-name {
+.tech__name {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -396,13 +396,13 @@ body::after {
     backdrop-filter: blur(5px); 
     -webkit-backdrop-filter: blur(10px); 
 
-    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border: 1px solid var(--accent-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 
-.tech-logo {
+.tech__logo {
     width: 3rem;
     height: 3rem;
     color: var(--accent-color);
@@ -411,7 +411,7 @@ body::after {
     opacity: 0.7;
 }
 
-.tech-halo {
+.tech__halo {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -423,7 +423,7 @@ body::after {
 
 /* Efectos hover */
 
-.tech-card:hover::before {
+.tech__card:hover::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -435,7 +435,7 @@ body::after {
     height: 6rem;
 }
 
-.tech-card:hover .tech-name {
+.tech__card:hover .tech__name {
     top: -40px;
     opacity: 1;
     padding: 0.5rem;
@@ -443,126 +443,126 @@ body::after {
     left: 0 auto;
 }
 
-.tech-card:hover .tech-logo {
+.tech__card:hover .tech__logo {
     transform: scale(1.1);
     color: rgba(240, 219, 79, 1);
     filter: drop-shadow(0 0 8px rgba(240, 219, 79, 0.7));
     opacity: 1;
 }
 
-.tech-card:hover .tech-halo {
+.tech__card:hover .tech__halo {
     opacity: 1;
 }
 
 /* Colores para diferentes tecnologías */
 
-.tech-card[data-tech="HTML"] {
+.tech__card[data-tech="HTML"] {
     background-color: rgba(255, 123, 0, 0.315);
     border-color: rgb(255, 123, 0, 0.2);
 }
 
-.tech-card[data-tech="HTML"]:hover {
+.tech__card[data-tech="HTML"]:hover {
     background-color: rgba(255, 123, 0, 0.2);
     border-color: rgb(255, 123, 0, 0.45);
 }
 
-.tech-card[data-tech="CSS"] {
+.tech__card[data-tech="CSS"] {
     background-color: rgba(0, 195, 221, 0.267); 
     border-color: rgba(0, 255, 200, 0.2);
 }
 
-.tech-card[data-tech="CSS"]:hover {
+.tech__card[data-tech="CSS"]:hover {
     background-color: rgba(0, 195, 221, 0.2); 
     border-color: rgb(0, 195, 221, 0.45);
 }
 
 
-.tech-card[data-tech="JavaScript"] {
+.tech__card[data-tech="JavaScript"] {
     background-color: rgba(221, 192, 6, 0.212);
     border-color: rgba(240, 219, 79, 0.2);
 }
 
-.tech-card[data-tech="JavaScript"]:hover {
+.tech__card[data-tech="JavaScript"]:hover {
     background-color: rgba(240, 219, 79, 0.2);
     border-color: rgba(240, 219, 79, 0.4);
 }
 
-.tech-card[data-tech="TypeScript"] {
+.tech__card[data-tech="TypeScript"] {
     background-color: rgba(26, 103, 124, 0.336);
     border-color: rgba(32, 171, 209, 0.226);
 }
 
-.tech-card[data-tech="TypeScript"]:hover {
+.tech__card[data-tech="TypeScript"]:hover {
     background-color: rgba(97, 218, 251, 0.15);
     border-color: rgba(97, 218, 251, 0.4);
 }
 
-.tech-card[data-tech="Tailwind"] {
+.tech__card[data-tech="Tailwind"] {
     background-color: rgba(21, 177, 164, 0.199); 
     border-color: rgba(21, 177, 164, 0.2);
 }
 
-.tech-card[data-tech="Tailwind"]:hover {
+.tech__card[data-tech="Tailwind"]:hover {
     background-color: rgba(21, 177, 164, 0.1); 
     border-color: rgba(21, 177, 164, 0.5);
 }
 
-.tech-card[data-tech="VisualStudio"] {
+.tech__card[data-tech="VisualStudio"] {
     background-color: rgba(4, 88, 136, 0.2); 
     border-color: rgba(4, 88, 136, 0.2);
 }
 
-.tech-card[data-tech="VisualStudio"]:hover {
+.tech__card[data-tech="VisualStudio"]:hover {
     background-color: rgba(4, 88, 136, 0.1); 
     border-color: rgba(0, 114, 180, 0.548);
 }
 
-.tech-card[data-tech="Angular"] {
+.tech__card[data-tech="Angular"] {
     background-color: rgba(221, 0, 48, 0.178); 
     border-color: rgba(221, 0, 49, 0.2);
 }
 
-.tech-card[data-tech="Angular"]:hover {
+.tech__card[data-tech="Angular"]:hover {
     background-color: rgba(221, 0, 49, 0.1); 
     border-color: rgba(221, 0, 49, 0.4);
 }
 
-.tech-card[data-tech="NodeJS"] {
+.tech__card[data-tech="NodeJS"] {
     background-color: rgba(3, 109, 3, 0.178); 
     border-color: rgba(3, 109, 3, 0.2);
 }
 
-.tech-card[data-tech="NodeJS"]:hover {
+.tech__card[data-tech="NodeJS"]:hover {
     background-color: rgba(3, 109, 3, 0.1); 
     border-color: rgba(3, 109, 3, 0.4);
 }
 
-.tech-card[data-tech="Git"] {
+.tech__card[data-tech="Git"] {
     background-color: rgba(221, 63, 0, 0.178); 
     border-color: rgba(221, 63, 0, 0.2);
 }
 
-.tech-card[data-tech="Git"]:hover {
+.tech__card[data-tech="Git"]:hover {
     background-color: rgba(221, 63, 0, 0.1); 
     border-color: rgba(221, 63, 0, 0.4);
 }
 
-.tech-card[data-tech="Terminal"] {
+.tech__card[data-tech="Terminal"] {
     background-color: rgba(1, 0, 53, 0.178); 
     border-color: rgba(1, 0, 53, 0.2);
 }
 
-.tech-card[data-tech="Terminal"]:hover {
+.tech__card[data-tech="Terminal"]:hover {
     background-color: rgba(1, 0, 53, 0.1); 
     border-color: rgba(1, 0, 53, 0.4);
 }
 
-.tech-card[data-tech="Github"] {
+.tech__card[data-tech="Github"] {
     background-color: rgba(117, 117, 126, 0.178); 
     border-color: rgba(117, 117, 126, 0.2);
 }
 
-.tech-card[data-tech="Github"]:hover {
+.tech__card[data-tech="Github"]:hover {
     background-color: rgba(117, 117, 126, 0.1); 
     border-color: rgba(117, 117, 126, 0.4);
 }
