@@ -132,10 +132,11 @@ body::after {
 }
 
 .info__title {
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 5rem;
     margin-bottom: -0.5rem;
     color: #dadada;
+    font-family: "Poppins"; 
+    font-weight: 600;
 }
 
 .info__text {
@@ -147,7 +148,16 @@ body::after {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    font-family: "Poppins"; 
+    font-weight: 600;
+}
+
+.main__content > div > svg {
+    width: 3.5rem;
+    height: 3rem;
+    fill: #ffffff;
+    margin-top: 0.5rem;
 }
 
 .projects__experience{
@@ -222,7 +232,8 @@ body::after {
 .project__details h3 {
     font-size: 1.8rem;
     color: #dadada;
-    width: 1rem;
+    font-family: "Poppins"; 
+    font-weight: 500;
 }
 
 .project__details p {
@@ -341,6 +352,16 @@ body::after {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: "Poppins"; 
+    font-weight: 600;
+}
+
+.stack__subtitle > svg{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 1rem;
+    fill: #d7dde2;
+    margin-top: 0.5rem;
 }
 
 .tech__container {
@@ -350,7 +371,7 @@ body::after {
     justify-content: center;
     align-items: center;
     list-style: none;
-    margin-bottom: 30rem;
+    margin-bottom: 5rem;
     margin-left: -4.5rem;
 }
 
@@ -421,13 +442,10 @@ body::after {
     border-radius: 8px;
 }
 
-/* Efectos hover */
-
 .tech__card:hover::before {
     content: '';
     position: absolute;
     inset: 0;
-    /*animation: borderGlow 1.5s infinite alternate;*/
     border: 1px solid var(--accent-color);
     border-radius: 8px;
     pointer-events: none;
@@ -567,3 +585,84 @@ body::after {
     border-color: rgba(117, 117, 126, 0.4);
 }
 
+.footer {
+    height: 15rem;
+    display: flex;
+    position: sticky;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    margin-bottom: 2.5rem; 
+}
+
+.footer__subtitle{
+    font-family: "Poppins"; 
+    font-weight: 600;
+}
+
+.footer__subtitle > svg{
+    width: 3rem;
+    height: 3rem;
+    fill: #d7dde2;
+    margin-bottom: -0.7rem;
+    margin-left: 0.5rem;
+}
+
+.social__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 3rem;
+}
+
+.social__link {
+    height: 5rem; 
+    width: 5rem; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    position: relative; 
+    border-radius: 50%;
+    background-color: transparent; 
+    border: none;
+
+    transition: all 400ms ease;
+    z-index: 2; 
+}
+
+.social__link svg {
+    height: 8rem; 
+    width: 8rem;
+    fill: #d7dde2;
+    transition: 300ms ease; 
+    z-index: 3;
+}
+
+.social__link svg:hover {
+    transform: scale(1.1);
+}
+
+.social__link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; 
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.103) 0%, transparent 70%); 
+    transform: translate(-50%, -50%) scale(0.8);
+    border-radius: 50%;
+    opacity: 0; 
+    transition: transform 0.4s cubic-bezier(.42, 0, .44, 1.68), opacity 0.4s ease; 
+    z-index: 1;
+}
+
+.social__link:hover::before {
+    transform: translate(-50%, -50%) scale(2); 
+    opacity: 1; 
+}
