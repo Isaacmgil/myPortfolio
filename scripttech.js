@@ -2,7 +2,7 @@
 const projectsData = [
     {
         id: "country-app",
-        liveUrl: "https://ejemplo.com/live-country-app",
+        liveUrl: "https://country-app-iamg.netlify.app/",
         technologies: [
             {
                 name: "HTML5",
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const liveButton = document.querySelector(`.live__button-link[data-live-project-id="${project.id}"]`);
         if (liveButton && project.liveUrl) {
             liveButton.href = project.liveUrl;
-            liveButton.target = "_blank"; // Abrir en nueva pestaña
+            liveButton.target = "_blank"; 
 
             liveButton.style.setProperty('--accent-color', '#4CAF50'); 
         }
