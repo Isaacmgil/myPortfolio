@@ -1,6 +1,6 @@
 html {
     font-size: 10px;
-    overflow: scroll;
+    overflow-x: hidden
 } 
 
 body {
@@ -166,14 +166,13 @@ body::after {
     font-size: 1.2rem;
     font-weight: 600;
     white-space: nowrap;
-    cursor: default;
+    cursor: pointer;
 
     position: relative; 
     overflow: hidden; 
     z-index: 0; 
 
     transition: background-color 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
-
     margin-top: 2rem; 
 }
 
