@@ -278,6 +278,7 @@ body::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: left center;
     transition: all 300ms;
 }
 
@@ -290,8 +291,7 @@ body::after {
     margin-left: 2rem;
     padding: 2rem;
     width: 70rem;
-    height: 25rem;
-    margin-bottom: -3rem
+    position: relative;
 }
 
 .project__details h3 {
@@ -307,13 +307,20 @@ body::after {
     line-height: 1.3;
 }
 
+.project__footer{
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
 .tech__list {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     list-style: none;
     padding: 0; 
     gap: 1.5rem;
-    position: absolute;
 }
 
 .tech__list span,
@@ -324,7 +331,7 @@ body::after {
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
-
+    
     padding: 1em;
     border-radius: 50%;
     height: 1rem;
@@ -333,7 +340,6 @@ body::after {
     flex-shrink: 0;
     display: grid;
     place-items: center;
-    position: relative;
     overflow: visible; 
     transition: all 0.3s ease; 
     text-decoration: none; 
@@ -398,8 +404,6 @@ body::after {
     display: flex; 
     align-items: center;
     justify-content: center;
-    left: 30rem;
-    top: 3.2rem;
 }
 
 .stack{
@@ -446,7 +450,6 @@ body::after {
     width: 6rem;
     height: 6rem;
     background-color: rgba(240, 210, 17, 0.192);
-    /* Fondo muy transparente */
     border-radius: 8px;
     display: flex;
     justify-content: center;    
