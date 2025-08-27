@@ -653,6 +653,16 @@ body::after {
     border-color: rgba(117, 117, 126, 0.4);
 }
 
+.tech__card[data-tech="Nestjs"] {
+    background-color: rgba(221, 0, 48, 0.178); 
+    border-color: rgba(221, 0, 49, 0.2);
+}
+
+.tech__card[data-tech="Nestjs"]:hover {
+    background-color: rgba(221, 0, 49, 0.1); 
+    border-color: rgba(221, 0, 49, 0.4);
+}
+
 .footer {
     height: 15rem;
     display: flex;
